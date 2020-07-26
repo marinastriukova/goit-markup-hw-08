@@ -1,0 +1,43 @@
+/*Social*/
+.social{
+    display: flex;
+    justify-content: center;
+
+    &-items{
+        margin-bottom: 24px;
+    
+        height: 44px;
+        width: 44px;
+        border-radius: 75%;
+        @include transition(background-color);
+    }
+
+    & a{
+        display: block;
+    }
+
+    &-icon{
+        width: 44px;
+        height: 44px;
+        fill: #afb1b8;
+        @include transition(fill);
+    }
+}
+
+.social-items{
+    &+&{
+        margin-left: 10px;
+    }
+
+    &:hover,&:focus{
+    background-color: $accent-color;
+    border-radius: 75%;
+    }
+}
+
+.social-icon{
+    .social-items:hover &,
+    .social-items:focus &{
+    fill: $white-color;
+    }
+}

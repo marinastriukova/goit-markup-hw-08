@@ -1,0 +1,222 @@
+/*SECTION особенности*/
+.section{
+    margin-bottom: 60px;
+
+    &-list + &-list{
+        margin-top: 30px;
+    }
+
+    @media screen and (min-width: $tablet){
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+
+        &-list{
+            width: calc((100%-4*15px)/2);
+            padding: 15px;
+        }
+
+        &-list + &-list{
+             margin-top: 0px;
+        }
+    }
+
+    @media screen and (min-width: $desktop){
+        
+        &-list{
+            width: calc((100%-4*15px)/4);
+            padding: 15px;
+            margin-bottom: 94px;
+        }
+    }
+ 
+
+    &-icon{
+        width: 100%;
+        /*width: 270px;*/
+        height: 120px;
+        background-color: $section-background;
+        border-radius: 4px;
+        text-align: center;
+    }
+    
+    &-svg{
+        width: 70px;
+        height: 70px;
+        margin-top: 25px;
+    }
+
+    &-title{
+        text-align: center;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        text-transform: uppercase;
+        margin-top: 30px;
+        margin-bottom: 10px;
+
+        @media screen and (min-width: $tablet){
+            text-align: left;
+        }
+    }
+
+    & .text{
+        line-height: 1.71;
+        margin: 0;
+    }
+}
+
+
+/*Чем мы занимаемся?*/
+.features{
+    @media screen and (max-width: $desktop - 1px){
+        display: none;
+    }
+
+    &-list{
+        display: flex;
+        margin-bottom: 94px;
+    }
+
+    &-title{
+        margin-bottom: 50px;
+    }
+
+    &-items{
+        position: relative;
+        &+&{
+            margin-left: 30px;
+        }
+    }
+
+    & p{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding-top: 27px;
+        padding-bottom: 27px;
+        margin: 0;
+        width: 100%;
+        font-weight: 700;
+        line-height: 1.14;
+        text-transform: uppercase;
+        text-align: center;
+        color: $white-color;
+        background: rgba(47, 48, 58, 0.8);
+    }
+
+    &-img{
+        display: block;
+    }
+}
+
+/*TEAM*/
+.team{
+    background-color: $section-background;
+    padding: 60px 0;
+
+    @media screen and (min-width: $desktop) {
+            padding-top: 94px;
+        }
+
+    &-title{
+        margin-bottom: 30px;  
+    }
+
+
+    &-list{
+
+        @media screen and (min-width: $tablet){
+            display: flex;
+            flex-wrap: wrap;
+            margin: -15px;
+           /* padding-bottom: 94px; */
+        }
+    }
+
+    &-items{
+        box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+        border-radius: 0px 0px 4px 4px; 
+        margin: 15px 0;
+
+        @media screen and (min-width: $tablet){
+            width: calc((100%-4*15px)/2);
+        }
+        /*&+&{
+            margin-left: 30px;
+        }*/
+    }
+
+    img{
+        width: 100%;
+    }
+
+    &-name{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.18;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    & p{
+        color: $primary-text-color;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.18;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+    
+}
+
+/*Наши клиенты*/
+.client{
+    &-title{
+        margin-bottom: 50px;
+        margin-top: 94px;  
+    }
+
+    &-list{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 94px;
+    }
+
+    &-link{
+        border: 1px solid #AFB1B8;
+        box-sizing: border-box;
+        border-radius: 4px;
+        width: 170px;
+        height: 90px;
+        display: inline-block;
+        text-align: center;
+        @include transition(border);
+    }
+
+    &-items + &-items{
+        margin-left: 30px;
+    }   
+}
+
+.icon-client{
+    fill: #afb1b8;
+    width: 100px;
+    height: 50px;
+    margin-top: 20px;
+    @include transition(fill);
+}
+
+.client-link{
+    &:hover,
+    &:focus{
+        border: 1px solid $accent-color;
+    }
+
+    &:hover svg,
+    &:focus svg{
+        fill: $accent-color;
+    }
+
+}

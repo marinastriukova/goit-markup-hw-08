@@ -1,0 +1,207 @@
+/*HEADER*/
+
+header{
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: $white-color;
+    font-weight: 500;   
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
+.header-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-button{
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+    @media screen and (min-width: $tablet){
+        display: none;
+    }
+
+    & .icon-close{
+        display: none;
+    }
+
+    &.is-open .icon-close{
+        display: block;
+    }
+
+    &.is-open .icon-open{
+        display: none;
+    }
+}
+
+.icon-close{
+    @include transition(fill);
+
+    &:focus, &:hover{
+        fill: $accent-color;
+    }
+}
+
+.icon-open{
+    @include transition(fill);
+
+    &:focus, &:hover{
+        fill: $accent-color;
+    }
+}
+
+.nav{
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (max-width: $tablet - 1px){
+        position: absolute;
+        /*display: none;*/
+        top: 100%;
+        left: 0;
+        background-color: $white-color;
+        width: 100%;
+
+        z-index: 20;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        @include transition(opacity);
+
+
+        &.is-open {
+            /*display: block;*/
+            opacity: 1;
+            visibility: visible;
+            pointer-events: initial;
+        }
+    }
+
+    @media screen and (min-width: $tablet){
+        display: flex;
+        justify-content: space-between;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }  
+}
+
+.current{
+    color: $accent-color;
+    padding-bottom: 8px;
+    
+
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    
+        height: 4px;
+        width: 100%;
+        border-radius: 2px;
+        background-color: $accent-color;
+    }
+}
+
+.menu-nav{
+    text-align: center;
+
+    @media screen and (min-width: $tablet){
+        display: flex;
+
+        &-items{
+            margin-left: 86px;
+
+            &+&{
+                margin-left: 50px;
+            }
+        }
+    }
+
+    &-link{
+        display: inline-block;
+        position: relative;
+        @include transition(color);
+        margin-bottom: 40px;   
+
+        @media screen and (min-width: $tablet){
+            padding-bottom: 32px;
+            padding-top: 32px;
+            margin-bottom: 0px;
+        }
+    }
+}
+
+
+.menu-nav-link:hover,
+.menu-nav-link:focus{
+    color: $accent-color;
+}
+
+
+.contact-nav{
+  
+    &-items{
+        padding-top: 16px;
+        text-align: center;
+    }
+
+    @media screen and (min-width: $tablet){
+        display: flex;
+        align-self: center;    
+        flex-direction: column;
+        text-align: left;
+        margin-left: 62px;
+        
+        &-items{
+            padding: 5px 0;
+            text-align: left;
+        }
+    }
+
+    @media screen and (min-width: $desktop){
+        flex-direction: row;
+        margin-left: 305px;
+
+        &-items + &-items{
+            margin-left: 30px;
+        }
+    }
+
+    &-link{
+        display: inline-flex;
+        color: $primary-text-color;
+        @include transition(color);
+    }
+
+    &-icon{
+        fill: $primary-text-color;
+        width: 16px;
+        height: 15px;
+        margin-right: 10px;
+        @include transition(fill);
+    }
+}
+
+
+.contact-nav-link{
+
+    &:focus, &:hover{
+    color: $accent-color;
+
+        & .contact-nav-icon{
+        fill: $accent-color;
+        }
+    }
+}
+
+
+
