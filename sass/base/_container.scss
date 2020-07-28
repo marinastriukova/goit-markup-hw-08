@@ -18,11 +18,10 @@ body{
     /*margin-left: auto;
     margin-right: auto;*/
     padding: 0;
-    background-color: rosybrown;
 
-    @media screen and (max-width: $mobile - 1px){
+    /*@media screen and (max-width: $mobile - 1px){
         overflow-y: hidden;
-    }
+    }*/
 }
 
 ul a,
@@ -58,7 +57,7 @@ h1,h2,h3,h4,h5,h6,ul,p,svg,img{
     
     padding-left: 15px;
     padding-right: 15px;
-    background-color: violet;
+    
 
     @media screen and (min-width: $mobile) {
         width: 480px;
