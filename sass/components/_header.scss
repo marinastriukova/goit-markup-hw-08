@@ -22,6 +22,11 @@ header{
     border: none;
     outline: none;
     background-color: transparent;
+    @include transition(fill);
+    
+    &:hover svg{
+        fill: $accent-color;
+    }
 
     @media screen and (min-width: $tablet){
         display: none;
@@ -29,30 +34,19 @@ header{
 
     & .icon-close{
         display: none;
+        @include transition(fill);
     }
 
     &.is-open .icon-close{
         display: block;
     }
 
+    & .icon-open{
+        @include transition(fill);
+    }
+
     &.is-open .icon-open{
         display: none;
-    }
-}
-
-.icon-close{
-    @include transition(fill);
-
-    &:focus, &:hover{
-        fill: $accent-color;
-    }
-}
-
-.icon-open{
-    @include transition(fill);
-
-    &:focus, &:hover{
-        fill: $accent-color;
     }
 }
 
@@ -62,7 +56,6 @@ header{
 
     @media screen and (max-width: $tablet - 1px){
         position: absolute;
-        /*display: none;*/
         top: 100%;
         left: 0;
         background-color: $white-color;
@@ -77,7 +70,6 @@ header{
 
 
         &.is-open {
-            /*display: block;*/
             opacity: 1;
             visibility: visible;
             pointer-events: initial;

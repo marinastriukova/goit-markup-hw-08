@@ -9,6 +9,11 @@
         justify-content: left;  
     }
 
+    @media screen and (min-width: $desktop){
+        margin-top: 94px;
+        margin-bottom: 50px;
+    }
+
     &-items{
         margin: 7px 2px;
     }
@@ -45,11 +50,12 @@
 .project{
     margin-left: -15px;
     margin-right: -15px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 
     @media screen and (min-width: $tablet){
         display: flex;
         flex-wrap: wrap;
+        margin-bottom: 30px;
     }
 
     @media screen and (min-width: $desktop){

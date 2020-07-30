@@ -14,21 +14,26 @@
     &.is-hidden {
         opacity: 0;
         pointer-events: none;
-        visibility: hidden;
+        visibility: visible;
       }
 }
 
 .modal-form {
+    
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
+    min-width: 320px;
     max-width: 528px;
     padding: 40px;
-  
     background-color: #fff;
     color: $title-text-color;
     @include transition(transform);
+
+    @media screen and (min-width: $mobile){
+        width: 450px;
+    }
 }
 
 .close-button{
@@ -160,6 +165,11 @@
     &-label{
         display: inline-flex;
         align-items: center;
+        white-space: nowrap;
+
+        @media screen and (max-width: $desktop - 1px){
+            font-size: 12px;
+        }
     }
 
     &-link{
