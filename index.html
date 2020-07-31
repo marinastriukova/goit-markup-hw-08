@@ -209,15 +209,33 @@
                 <h2 class="features-title">Чем мы занимаемся</h2>
                 <ul class="features-list">
                     <li class="features-items">
-                        <img class="features-img" src="./image/desktop.jpg" alt="desktop">
+                        <img class="features-img"
+                            srcset="
+                              ./image/desktop.jpg 1x,
+                              ./image/desktop@2x.jpg 2x"
+                            src="./image/desktop.jpg"
+                            alt="desktop">
+                        <!-- <img class="features-img" src="./image/desktop.jpg" alt="desktop"> -->
                         <p>Десктопные приложения</p>
                     </li>
                     <li class="features-items">
-                        <img class="features-img" src="./image/mobi.jpg" alt="mobi">
+                        <img class="features-img"
+                            srcset="
+                              ./image/mobi.jpg 1x,
+                              ./image/mobi@2x.jpg 2x"
+                            src="./image/mobi.jpg"
+                            alt="mobi">
+                        <!-- <img class="features-img" src="./image/mobi.jpg" alt="mobi"> -->
                         <p>Мобильные приложения</p>
                     </li>
                     <li class="features-items">
-                        <img class="features-img" src="./image/design.jpg" alt="design">
+                        <img class="features-img"
+                            srcset="
+                              ./image/design.jpg 1x,
+                              ./image/design@2x.jpg 2x"
+                            src="./image/design.jpg"
+                            alt="design">
+                        <!-- <img class="features-img" src="./image/design.jpg" alt="design"> -->
                         <p>Дизайнерские решения</p>
                     </li>
                 </ul>
@@ -229,7 +247,22 @@
                     <h2 class="team-title">Наша команда</h2>
                     <ul class="team-list">
                         <li class="team-items">
-                            <img src="./image/николай.jpg" alt="Николай Кучеренко">
+                        <!-- <picture>
+                                 <source
+                                  srcset="
+                                    ./image/mikola.webp 480w,
+                                    ./image/mikola@2x.webp 768w"
+                                  type="image/webp"
+                                /> -->
+                                <img
+                                  srcset="
+                                    ./image/mikola.jpg 480w,
+                                    ./image/mikola@2x.jpg 768w"
+                                  src="./image/mikola.jpg"
+                                  alt="selfie"
+                                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw,  100vw">
+                           <!--    </picture>
+                             <img src="./image/николай.jpg" alt="Николай Кучеренко"> --> 
                             <h3 class="team-name">Николай Кучеренко</h3>
                             <p>Product Designer</p>
                             <ul class="social">
@@ -264,7 +297,14 @@
                             </ul>
                         </li>
                         <li class="team-items">
-                            <img src="./image/ольга.jpg" alt="Ольга Иванова">
+                            <img
+                                  srcset="
+                                    ./image/olya.jpg 480w,
+                                    ./image/olya@2x.jpg 768w"
+                                  src="./image/olya.jpg"
+                                  alt="selfie"
+                                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw,  100vw">
+                            <!-- <img src="./image/ольга.jpg" alt="Ольга Иванова"> -->
                             <h3 class="team-name">Ольга Иванова</h3>
                             <p>Frontend Developer</p>
                             <ul class="social">
@@ -299,7 +339,14 @@
                             </ul>
                         </li>
                         <li class="team-items">
-                            <img src="./image/андрей.jpg" alt="Андрей Шевченко">
+                            <img
+                                  srcset="
+                                    ./image/andrey.jpg 480w,
+                                    ./image/andrey@2x.jpg 768w"
+                                  src="./image/andrey.jpg"
+                                  alt="selfie"
+                                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw,  100vw">
+                            <!-- <img src="./image/андрей.jpg" alt="Андрей Шевченко"> -->
                             <h3 class="team-name">Андрей Шевченко</h3>
                             <p>Marketing</p>
                             <ul class="social">
@@ -334,7 +381,14 @@
                             </ul>
                         </li>
                         <li class="team-items">
-                            <img src="./image/иван.jpg" alt="Иван Николаев">
+                            <img
+                                  srcset="
+                                    ./image/ivan.jpg 480w,
+                                    ./image/ivan@2x.jpg 768w"
+                                  src="./image/ivan.jpg"
+                                  alt="selfie"
+                                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw,  100vw">
+                            <!-- <img src="./image/иван.jpg" alt="Иван Николаев"> -->
                             <h3 class="team-name">Иван Николаев</h3>
                             <p>UI Designer</p>
                             <ul class="social">
