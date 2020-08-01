@@ -21,9 +21,7 @@ body {
   /*margin-left: auto;
     margin-right: auto;*/
   padding: 0;
-  /*@media screen and (max-width: $mobile - 1px){
-        overflow-y: hidden;
-    }*/
+  min-width: 320px;
 }
 
 ul a,
